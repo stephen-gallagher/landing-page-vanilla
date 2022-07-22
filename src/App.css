@@ -1,38 +1,109 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway';
+}
+
+html {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1),
+    rgb(193, 193, 193)
+  );
+}
+
+/* ---- NAVIGATION ---- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100 !important;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #04050f;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 5px #ffffff;
+  transition: 0.3s;
+}
+
+/* ---- CAROUSEL ---- */
+.thumbs-wrapper {
+  display: none;
+}
+
+.carouselImg {
+  border-bottom: 5px solid #04050f;
+}
+
+.carouselImg img {
+  height: 30vh;
+  text-align: center;
+  object-fit: cover;
+}
+
+/* ----HOMEPAGE CONTENT ---- */
+.homepageSection {
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 4rem;
+}
+
+.homepageHeading {
+  font-size: 4rem;
+}
+
+/* ---- SUBPAGE CONTENT ---- */
+.subpage img {
+  height: 95vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.subpage div {
+  position: absolute;
+  color: white;
+  top: 40%;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subpage h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px #000000;
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.subpage button {
+  background-color: #37c987;
+  box-shadow: 10px 5px 5px rgb(78, 117, 101);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.subpage button:hover {
+  background-color: #a2d4bd;
+  transition: 0.3s;
+}
+
+/* --- RESIZE HOMEPAGE CONTENT FOR PHONE SCREEN ---- */
+@media (max-width: 800px) {
+  .homepageSection {
+    margin-left: 10%;
+    margin-right: 10%;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  nav a {
+    font-size: 0.8rem;
   }
 }
